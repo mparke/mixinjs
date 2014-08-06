@@ -1,4 +1,4 @@
 mixinjs
 =======
 
-A mixin helper
+A Mixin Helper Module

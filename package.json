@@ -1,0 +1,13 @@
+{
+  "name": "mixinjs",
+  "version": "0.0.1",
+  "description": "Mixin Helper Module",
+  "private": true,
+  "authors": [
+    "mparke <mparke78@gmail.com>"
+  ],
+  "devDependencies": {
+    "gulp": "*",
+    "gulp-bump": "*"
+  }
+}
