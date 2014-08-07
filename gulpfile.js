@@ -32,7 +32,7 @@ gulp.task('bump-major', function(){
 
 gulp.task('scripts', ['clean'], function() {
   return gulp.src(paths.scripts)
-    .pipe(uglify())
+    .pipe(uglify({ preserveComments: 'some' }))
     .pipe(gulp.dest('build'));
 });
 
