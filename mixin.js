@@ -18,9 +18,9 @@
   }
 
   if (typeof module === 'object') {
-    define(function () { return Mixin; });
-  } else if (typeof define === 'function') {
     module.exports = Mixin;
+  } else if (typeof define === 'function') {
+    define(function () { return Mixin; });
   } else {
     window.Mixin = Mixin;
   }
