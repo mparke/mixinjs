@@ -19,7 +19,7 @@ A Mixin Helper Module
   
   var MixedConstructor = mixin(MyRevealingModule, Mixin1, Mixin2);
   
-  var mixedInstance = new MixedConstructor();
+  var mixedInstance = MixedConstructor();
   mixedInstance.publicMethod();    // hello public method
   console.log(mixedInstance.prop); // hello world
   console.log(mixedInstance.val);  // 10
