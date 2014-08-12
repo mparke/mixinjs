@@ -2,7 +2,13 @@
 (function (window, Array) {
   var slice = Array.prototype.slice;
 
-  function Mixin (Module) {
+  /**
+  *  Creates a constructor that automatically mixes other modules into a given revealing module
+  *  @param {function} Module: the revealing module to be mixed into
+  *  @param {...function} any number of mixins to be applied with .call
+  *  @return {function} a new module constructor
+  */
+  function mixin(Module) {
     var MixinModules = slice.call(arguments, 1);
     var length = MixinModules.length;
 
@@ -18,10 +24,10 @@
   }
 
   if (typeof module === 'object') {
-    module.exports = Mixin;
+    module.exports = mixin;
   } else if (typeof define === 'function') {
-    define(function () { return Mixin; });
+    define(function () { return mixin; });
   } else {
-    window.Mixin = Mixin;
+    window.mixin = mixin;
   }
 })(window, Array);
